@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Box, Grid, Tabs, Tab, Typography, Divider } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import CarouselContent from "../components/admin/CarouselContent";
+import EventUpdates from "../components/admin/EventUpdatesContent";
+import GalleryContent from "../components/admin/GalleryContent";
+import LatestUpdates from "../components/admin/LatestUpdatesContent";
 
 const StyledTabs = styled(Tabs)(({ theme }) => ({
   borderRight: `1px solid ${theme.palette.divider}`,
@@ -53,21 +57,13 @@ const Admin = () => {
         </Grid>
         <Grid item xs={10}>
           <TabContent>
-            {tabValue === 0 && (
-              <Typography variant="h6">Carousel Content</Typography>
-            )}
-            {tabValue === 1 && (
-              <Typography variant="h6">Future Events Content</Typography>
-            )}
+            {tabValue === 0 && <CarouselContent />}
+            {tabValue === 1 && <EventUpdates />}
             {tabValue === 2 && (
               <Typography variant="h6">Pilgrimage Services Content</Typography>
             )}
-            {tabValue === 3 && (
-              <Typography variant="h6">Gallery Content</Typography>
-            )}
-            {tabValue === 4 && (
-              <Typography variant="h6">Latest Updates Content</Typography>
-            )}
+            {tabValue === 3 && <GalleryContent />}
+            {tabValue === 4 && <LatestUpdates />}
           </TabContent>
         </Grid>
       </Grid>

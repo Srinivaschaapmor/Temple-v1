@@ -1,45 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import NewTag from "../../assets/NewTag.svg";
-
-const updates = [
-  {
-    id: 1,
-    date: "29-07-2024",
-    title: "Update 1",
-    details: "Details about update 1.",
-  },
-  {
-    id: 2,
-    date: "29-07-2024",
-    title: "Update 2",
-    details: "Details about update 2.",
-  },
-  {
-    id: 3,
-    date: "29-07-2024",
-    title: "Update 3",
-    details: "Details about update 3.",
-  },
-  {
-    id: 4,
-    date: "29-07-2024",
-    title: "Update 4",
-    details: "Details about update 4.",
-  },
-  {
-    id: 5,
-    date: "29-07-2024",
-    title: "Update 5",
-    details: "Details about update 5.",
-  },
-  {
-    id: 6,
-    date: "29-07-2024",
-    title: "Update 6",
-    details: "Details about update 6.",
-  },
-];
+import { updatesData } from "../../utilities/Data";
 
 const LatestUpdates = () => {
   return (
@@ -66,7 +28,7 @@ const LatestUpdates = () => {
         }}
       >
         <Stack spacing={2}>
-          {updates.map((update) => (
+          {updatesData.map((update) => (
             <Stack
               key={update.id}
               direction="row"

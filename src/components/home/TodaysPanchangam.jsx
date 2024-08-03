@@ -20,7 +20,7 @@ const TodaysPanchangam = () => {
     <Box bgcolor="whitesmoke" p={1} borderRadius={2}>
       <Stack direction="row" spacing={2} alignItems="center">
         <Typography fontSize={15} fontWeight={600} color={"rgb(245, 131, 34)"}>
-          Today's Panchagam
+          Today's Panchangam
         </Typography>
         <Divider orientation="vertical" flexItem sx={{ mx: 2 }} />
         <Box

@@ -1,9 +1,10 @@
 import React from "react";
 import { Box, Container } from "@mui/material";
 import Header from "../components/header/Header";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import Footer from "../components/footer/Footer";
 import TodaysPanchangam from "../components/home/TodaysPanchangam";
+import Cookies from "js-cookie";
 
 const ProtectedRoute = () => {
   return (
@@ -13,7 +14,6 @@ const ProtectedRoute = () => {
       <Box>
         <Outlet />
       </Box>
-
       <Footer />
     </Box>
   );
