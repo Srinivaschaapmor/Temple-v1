@@ -3,7 +3,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./utilities/ProtectedRoute";
-import LandingPage from "./Components/home/LandingPage";
+
+import Home from "./pages/Home";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,7 +29,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ProtectedRoute />}>
-            <Route index element={<LandingPage />} />
+            <Route index element={<Home />} />
             {/* Add more routes here as needed */}
           </Route>
         </Routes>

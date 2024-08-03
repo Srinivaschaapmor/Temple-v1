@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../Assets/Logo.jpg";
+import Logo from "../../assets/Logo.jpg";
 import { Box, Button, Stack, Typography } from "@mui/material";
 
 const Header = () => {
