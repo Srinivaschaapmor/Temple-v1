@@ -8,13 +8,15 @@ import Gallery from "../components/home/Gallery";
 import SubscribeNewsletter from "../components/home/SubscribeNewsletter";
 import FaceBookPage from "../components/home/FaceBookPage";
 import TodaysPanchangam from "../components/home/TodaysPanchangam";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <Box sx={{ bgcolor: "rgb(239, 239, 239)", pb: 5, px: 5 }}>
       {/* <InformationMarquee /> */}
-      <TodaysPanchangam />{" "}
+      {/* <TodaysPanchangam />{" "} */}
       <Grid
+        mt={0}
         container
         spacing={3}
         sx={{
@@ -40,7 +42,9 @@ const Home = () => {
             <FaceBookPage />
           </Grid>
           <Grid xs={4}>
-            <Gallery />
+            <Link to={"/gallery"}>
+              <Gallery />
+            </Link>
           </Grid>
           <Grid xs={4}>
             <LatestUpdates />

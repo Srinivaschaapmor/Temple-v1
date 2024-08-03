@@ -9,6 +9,7 @@ import {
   Avatar,
   Menu,
   MenuItem,
+  IconButton,
 } from "@mui/material";
 import { NavLink, useNavigate } from "react-router-dom";
 import Login from "../login/Login";
@@ -33,7 +34,7 @@ const Header = () => {
   // Define navigation links
   const navLinks = [
     { text: "About", path: "/about" },
-    { text: "Darshnam", path: "/darshnam" },
+    { text: "Darshanam", path: "/darshanam" },
     { text: "Sevas", path: "/sevas" },
     { text: "Gallery", path: "/gallery" },
   ];
@@ -47,35 +48,41 @@ const Header = () => {
     >
       <Stack direction="row" alignItems="center" justifyContent="space-between">
         {/* Logo and Title Section */}
-        <Stack direction="row" alignItems="center" ml={10} spacing={2}>
-          <img
-            src={Logo}
-            alt="Temple Logo"
-            style={{ width: 70, borderRadius: "50%" }}
-          />
-          <Stack alignItems="center">
-            <Typography
-              sx={{
-                fontFamily: "sans-serif",
-                fontSize: 18,
-                fontWeight: 600,
-                color: "white",
-              }}
-            >
-              Temple
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "sans-serif",
-                fontSize: 16,
-                fontWeight: 600,
-                color: "white",
-              }}
-            >
-              Devasthanam
-            </Typography>
+        <IconButton
+          onClick={() => navigate("/")}
+          sx={{ ":hover": { bgcolor: "transparent" } }}
+        >
+          {" "}
+          <Stack direction="row" alignItems="center" ml={10} spacing={2}>
+            <img
+              src={Logo}
+              alt="Temple Logo"
+              style={{ width: 70, borderRadius: "50%" }}
+            />
+            <Stack alignItems="center">
+              <Typography
+                sx={{
+                  fontFamily: "sans-serif",
+                  fontSize: 18,
+                  fontWeight: 600,
+                  color: "white",
+                }}
+              >
+                Temple
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "sans-serif",
+                  fontSize: 16,
+                  fontWeight: 600,
+                  color: "white",
+                }}
+              >
+                Devasthanam
+              </Typography>
+            </Stack>
           </Stack>
-        </Stack>
+        </IconButton>
 
         {/* Navigation Links Section */}
         <Stack direction="row" spacing={1} sx={{ mr: 5 }}>

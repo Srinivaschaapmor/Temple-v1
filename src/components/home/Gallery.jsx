@@ -1,11 +1,15 @@
 import { Box, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import img1 from "../../assets/img-1.jpg";
 import img2 from "../../assets/img-2.png";
 import img3 from "../../assets/img-3.jpg";
 import img4 from "../../assets/img-2.jpg";
 
 const Gallery = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Box
       // border={"1px solid"}
